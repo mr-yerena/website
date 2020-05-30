@@ -1,0 +1,12 @@
+{
+  "plugins": [
+    "import-quotes"
+  ],
+  "extends": "airbnb",
+  "rules": {
+    "react/jsx-filename-extension": [1, { "extensions": [ ".js", ".jsx" ] } ],
+    "quotes": ["error", "backtick"],
+    "semi": ["error", "never"],
+    "import-quotes/import-quotes": [1, "single"]
+  }
+}

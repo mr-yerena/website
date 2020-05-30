@@ -1,3 +1,6 @@
+// Importing sass files with globs
+const globImporter = require('node-sass-glob-importer')
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby Default Starter`,
@@ -6,6 +9,25 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-resolve-src`,
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        importer: globImporter()
+      }
+    },
+    {
+      resolve: `gatsby-plugin-eslint`,
+      options: {
+        test: /\.js$|\.jsx$/,
+        exclude: /(node_modules|.cache|public)/,
+        stages: [`develop`],
+        options: {
+          emitWarning: true,
+          failOnError: false
+        }
+      }
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
