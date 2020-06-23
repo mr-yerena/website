@@ -1,0 +1,24 @@
+.fun-fact-background {
+
+  background-size: cover;
+
+  .fun-facts {
+    & svg {
+      font-size: $size-11;
+      color: $white;
+    }
+  
+    & .fact-text {
+      font-family: $family-primary;
+      font-size: $size-11;
+      font-weight: $weight-bold;
+      line-height: $size-12;
+      margin-bottom: $size-3;
+      color: $white;
+    }
+
+    & p {
+      color: $white;
+    }
+  }
+}

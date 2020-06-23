@@ -1,0 +1,12 @@
+.text-field, .text-field:active, .text-field:focus {
+  font-family: $family-primary;
+  font-size: $size-6;
+  font-weight: $weight-normal;
+  color: $black-ter;
+  border: none;
+  border-bottom: $size-2 solid $black;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  box-shadow: none;
+}

@@ -1,0 +1,17 @@
+.rich-text {
+  & ul {
+    margin-bottom: $size-10;
+    list-style: inside;
+
+    & li {
+
+      list-style-type: disc;
+
+      & p {
+        margin-bottom: 0;
+        margin-left: -$size-3;
+        display: inline-block;
+      }
+    }
+  }
+}

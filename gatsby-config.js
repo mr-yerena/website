@@ -1,3 +1,7 @@
+require('dotenv').config({
+  path: `.env`
+})
+
 // Importing sass files with globs
 const globImporter = require('node-sass-glob-importer')
 
@@ -14,6 +18,20 @@ module.exports = {
       resolve: `gatsby-plugin-sass`,
       options: {
         importer: globImporter()
+      }
+    },
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+      }
+    },
+    {
+      resolve: `gatsby-plugin-nprogress`,
+      options: {
+        color: `tomato`,
+        showSpinner: true
       }
     },
     {

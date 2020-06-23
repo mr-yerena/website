@@ -1,0 +1,17 @@
+// Import Fonts
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;800&display=swap');
+
+$family-primary: 'Raleway', $family-sans-serif;
+$family-secondary: 'Open Sans', $family-sans-serif;
+
+// Font Weights
+$weight-ultrabold: 900;
+
+p {
+  font-size: $size-7;
+  line-height: $size-9;
+  font-family: $family-secondary;
+  margin-bottom: $size-7;
+  color: $grey-dark;
+}

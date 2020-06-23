@@ -1,0 +1,33 @@
+.about-me {
+  & .about-me-header {
+    margin-bottom: $size-8;
+
+    & .title {
+      margin-bottom: $size-3;
+    }
+  }
+
+  & .social-media {
+    & li {
+      display: inline-block;
+
+      &:not(:first-of-type) {
+        margin-left: $size-4;
+      }
+
+      & .social-media-link {
+        border-radius: 50%;
+        width: $size-11;
+        display: block;
+        height: $size-11;
+        padding: 0;
+        text-align: center;
+        line-height: $size-11;
+
+        & svg {
+          font-size: $size-6;
+        }
+      }
+    }
+  }
+}

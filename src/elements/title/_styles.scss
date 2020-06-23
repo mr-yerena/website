@@ -1,0 +1,76 @@
+.h1 {
+  font-family: $family-primary;
+  font-size: $size-14;
+  font-weight: $weight-ultrabold;
+  line-height: $size-15;
+  color: $white;
+
+  & span.slider-text {
+    display: block;
+    font-size: $size-9;
+    line-height: $size-10;
+    font-weight: $weight-normal;
+    margin-top: $size-5;
+
+    & .skill-bold {
+      font-weight: $weight-bold;
+      padding-left: $size-3;
+    }
+    
+    &:first-of-type {
+      margin-top: $size-10;
+    }
+  }
+}
+
+.sectionTitle, .h2 {
+  font-size: $size-10;
+  font-weight: $weight-semibold;
+  font-family: $family-primary;
+  text-transform: uppercase;
+  color: $black-ter;
+  line-height: $size-11;
+  text-align: center;
+
+  & span {
+    display: block;
+    font-size: $size-7;
+    font-weight: $weight-medium;
+    line-height: $size-8;
+    margin-bottom: $size-4;
+  }
+}
+
+.h3 {
+  font-family: $family-primary;
+  font-size: $size-8;
+  font-weight: $weight-normal;
+  line-height: $size-10;
+  color: $black-ter;
+  text-transform: uppercase;
+}
+
+.h4 {
+  font-size: $size-8;
+  font-family: $family-primary;
+  font-weight: $weight-bold;
+  line-height: $size-9;
+  text-align: center;
+  margin-bottom: $size-7!important;
+}
+
+.h5 {
+  font-size: $size-9;
+  font-weight: $weight-semibold;
+  margin-top: $size-8!important;
+  margin-bottom: $size-3!important;
+  font-family: $family-primary;
+  line-height: $size-10;
+}
+
+.h6 {
+  font-size: $size-6;
+  font-weight: $weight-semibold;
+  margin-bottom: $size-8!important;
+  line-height: $size-9;
+}

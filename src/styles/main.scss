@@ -1,6 +1,10 @@
 // Set Encoding to utf-8
 @charset "utf-8";
 
+body, html {
+  font-size: 16px!important;
+}
+
 // Import bulma base stuff
 @import "~bulma/sass/utilities/_all";
 
@@ -21,6 +25,10 @@
 @import "~bulma-divider/dist/css/bulma-divider.sass";
 @import "~bulma-pageloader/dist/css/bulma-pageloader.sass";
 @import "~bulma-tooltip/dist/css/bulma-tooltip.sass";
+
+// Import React Slick libraries
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
 
 // Supersets for custom UI
 @import '_typography';

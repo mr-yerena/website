@@ -1,0 +1,21 @@
+.content-columns {
+  & .icon-container {
+    width: 100%;
+    margin-bottom: $size-8;
+
+    & span {
+
+      border: $size-1 solid $grey-lighter;
+      display: inline-block;
+      width: $size-14;
+      height: $size-14;
+      border-radius: 50%;
+      line-height: 6.9rem;
+
+      & svg {
+        font-size: $size-12;
+        color: $black-ter;
+      }
+    }
+  }
+}

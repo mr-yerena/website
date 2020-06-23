@@ -1,0 +1,26 @@
+.call-to-action {
+  background-color: $black-ter;
+  border: $size-2 solid $black-ter;
+  color: $white;
+  text-transform: uppercase;
+  font-size: $size-6;
+  font-weight: $weight-semibold;
+  font-family: $family-primary;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  padding-right: $size-8;
+  padding-left: $size-8;
+  padding-top: $size-4;
+  padding-bottom: $size-4;
+  transition: .2s background-color ease;
+  height: auto;
+  vertical-align: unset;
+  line-height: $size-7;
+
+  &:hover {
+    color: $black-ter;
+    background-color: transparent;
+    border: $size-2 solid $black-ter;
+  }
+}
