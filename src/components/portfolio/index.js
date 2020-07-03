@@ -17,7 +17,7 @@ const Portfolio = (props) => {
   const { title, subTitle, portfolio } = props
 
   return (
-    <Section>
+    <Section className={`portfolio`} backgroundColor={`grey`}>
       <Container>
         <Column.Group>
           <Column>
@@ -29,12 +29,18 @@ const Portfolio = (props) => {
           </Column>
         </Column.Group>
 
-        <Column.Group>
+        <Column.Group className={`is-multiline`}>
           {
             portfolio.map((item, index) => (
-              <Column size={4} key={`portfolio-card-${ElementKey(index)}`}>
+              <Column size={4} className={`portfolio-item-column`} key={`portfolio-card-${ElementKey(index)}`}>
                 <Card
-                  title={item.title}
+                  title={item.name}
+                  image={item.projectImage.file.url}
+                  description={item.description.description}
+                  link={{
+                    title: `View project`,
+                    to: item.to,
+                  }}
                 />
               </Column>
             ))

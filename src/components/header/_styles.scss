@@ -11,6 +11,10 @@
     line-height: $size-11;
     color: $black-ter;
     text-transform: uppercase;
+
+    &:hover {
+      color: $grey;
+    }
   }
 
   & .navbar-links-item {

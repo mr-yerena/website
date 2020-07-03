@@ -9,6 +9,7 @@ import CustomerTestimonial from 'components/customerTestimonial'
 import Slider from 'components/slider'
 import FunFacts from 'components/funFacts'
 import ContactMe from 'components/contactMe'
+import Portfolio from 'components/portfolio'
 
 // Import Libraries
 import { graphql } from 'gatsby'
@@ -88,6 +89,28 @@ export const query = graphql`
           name
         }
       }
+      portfolio {
+        titleSection
+        pageDescription {
+          content {
+            content {
+              value
+            }
+          }
+        }
+        projects {
+          name
+          projectImage {
+            file {
+              url
+            }
+          }
+          description {
+            description
+          }
+          to
+        }
+      }
       funFacts {
         factTitle
         fact
@@ -113,6 +136,7 @@ const Index = ({ data }) => {
     funFacts,
     funFactBackground,
     contactMe,
+    portfolio,
   } = data.contentfulHomePage
 
   return (
@@ -140,6 +164,12 @@ const Index = ({ data }) => {
       <FunFacts
         facts={funFacts}
         background={funFactBackground.file.url}
+      />
+
+      <Portfolio
+        title={portfolio.titleSection}
+        subTitle={portfolio.pageDescription.content[0].content[0].value}
+        portfolio={portfolio.projects}
       />
 
       <CustomerTestimonial
@@ -194,6 +224,11 @@ Index.propTypes = {
       funFacts: PropTypes.arrayOf(PropTypes.object).isRequired,
       funFactBackground: PropTypes.shape({
         file: PropTypes.object,
+      }).isRequired,
+      portfolio: PropTypes.shape({
+        titleSection: PropTypes.string,
+        pageDescription: PropTypes.objectOf(PropTypes.object),
+        projects: PropTypes.arrayOf(PropTypes.object),
       }).isRequired,
       contactMe: PropTypes.shape({
         title: PropTypes.string.isRequired,

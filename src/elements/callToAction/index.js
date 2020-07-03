@@ -9,7 +9,12 @@ import { Button } from 'rbx'
 import PropTypes from 'prop-types'
 
 const CallToAction = (props) => {
-  const { to, children, className } = props
+  const {
+    to,
+    children,
+    className,
+    disabled,
+  } = props
 
   return (
     <>
@@ -21,7 +26,7 @@ const CallToAction = (props) => {
             }
           </Link>
         ) : (
-          <Button className={`call-to-action ${className}`}>
+          <Button className={`call-to-action ${className}`} disabled={disabled}>
             {
               children
             }
@@ -35,12 +40,14 @@ const CallToAction = (props) => {
 CallToAction.defaultProps = {
   to: null,
   className: null,
+  disabled: false,
 }
 
 CallToAction.propTypes = {
   to: PropTypes.string,
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
+  disabled: PropTypes.bool,
 }
 
 export default CallToAction

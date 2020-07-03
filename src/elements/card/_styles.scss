@@ -1,0 +1,14 @@
+.card-element {
+  & .card-link {
+    background-color: transparent;
+    border: none;
+    color: $black-ter;
+    padding: 0;
+    text-transform: capitalize;
+    size: $size-6;
+
+    &:hover {
+      color: $grey;
+    }
+  }
+}
