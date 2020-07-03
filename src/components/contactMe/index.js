@@ -21,16 +21,26 @@ const ContactMe = (props) => {
   const [renderForm, setRenderForm] = useState(true)
   const [successMessage, setSuccessMessage] = useState(true)
 
-  const encode = (data) => {
-    return Object.keys(data).map(key => encodeURIComponent(key) + `=` + encodeURIComponent(data[key])).join(`&`)
-  }
+  const encode = (data) => Object.keys(data).map((key) => `${encodeURIComponent(key)} + ${encodeURIComponent(data[key])}`).join(`&`)
 
   const onSubmitHandler = (values, setSubmitting) => {
+    fetch(`/`, {
+      method: `POST`,
+      headers: {
+        "Content-Type": `application/x-www-form-urlencoded`,
+      },
+      body: encode(values),
+    }).then(() => {
+      setSuccessMessage(true)
+    }).catch((error) => {
+      setSuccessMessage(false)
+    })
+
     setRenderForm(false)
     setSubmitting(false)
   }
 
-  let formInitialValues = {
+  const formInitialValues = {
     name: ``,
     email: ``,
     comments: ``,
@@ -70,7 +80,7 @@ const ContactMe = (props) => {
             && (<Formik
               initialValues={formInitialValues}
               validationSchema={Yup.object().shape(validationSchema)}
-              onSubmit={ (values, {setSubmitting}) => { onSubmitHandler(values, setSubmitting) }}
+              onSubmit={(values, { setSubmitting }) => { onSubmitHandler(values, setSubmitting) }}
             >
               { ({
                 values,

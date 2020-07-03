@@ -21,9 +21,11 @@ const CustomerTestimonial = (props) => {
   const settings = {
     dots: false,
     infinite: true,
-    speed: 500,
+    speed: 700,
     slidesToShow: 1,
     slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 6000,
   }
 
   return (
